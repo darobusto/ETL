@@ -74,7 +74,7 @@ block_groups.to_csv('block_groups.csv', index=False)
 
 db_string = sys.argv[1]
 
-table_name = 'drobusto_ETL'
+table_name = 'drobusto_etl'
 
 engine = create_engine(db_string)
 block_groups.pg_copy_to(table_name, engine, if_exists = 'replace', index = False, schema = 'acs')
